@@ -26,3 +26,9 @@ ggplot(aes(x=vs, y=mpg, fill=vs), data = mtcars) + geom_boxplot(alpha=0.3)+theme
 #Create a Histogram of variable weight wt; geom_histogram() for Histogram
 ggplot(aes(x=wt),data=mtcars)+geom_histogram(binwidth=0.5)
        
+#Using GGally library
+library(datasets)
+data(iris)
+
+library(GGally)
+ggpairs(iris, mapping=ggplot2::aes(color = Species))
